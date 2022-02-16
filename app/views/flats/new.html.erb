@@ -6,8 +6,11 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
   <%= f.label :price_per_night %>
-  <%= f.integer_field :price_per_night %>
+  <%= f.number_field :price_per_night %>
   <%= f.label :number_of_guests %>
-  <%= f.integer_field :number_of_guests %>
+  <%= f.number_field :number_of_guests %>
   <%= f.submit %>
 <% end %>
+<button type="button" class="btn btn-outline-primary">
+  <%= link_to "back to lists", flats_path%>
+</button>

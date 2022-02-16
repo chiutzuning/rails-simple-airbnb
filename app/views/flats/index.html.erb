@@ -1,0 +1,23 @@
+<h2 class="text-center m-3">All our Flats<%= @flats.count%>
+<div class="row">
+ <% @flats.each do |flat| %>
+  <div class="col-sm-3">
+    <div class="card mb-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" class="display-2"><%= flat.name %></h5>
+        <p class="card-text" class="display-4"><%= flat.address %></p>
+        <p class="card-text" class="display-4"><%= flat.description %></p>
+        <button type="button" class="btn btn-outline-primary">
+          <%= link_to "More Info", flat_path(flat) %>
+        </button>
+      </div>
+    </div>
+  </div>
+ <% end %>
+</div>
+<button type="button" class="btn btn-outline-primary">
+  <%= link_to "add a new flat", new_flat_path(@flat)%>
+</button>
+
+<i class="far fa-address-book"></i>
+<i class="fab fa-github"></i>

@@ -1,0 +1,29 @@
+<div class="card text-center">
+ <div class="card-header">
+  <h2><%= @flat.name %></h2>
+ </div>
+ <div class="card-body">
+    <p><%= @flat.address %></p>
+    <p><%= @flat.description %></p>
+    <p><%= @flat.price_per_night %></p>
+    <p><%= @flat.number_of_guests %></p>
+ </div>
+  <button type="button" class="btn btn-outline-primary">
+    <%= link_to "Edit", edit_flat_path(@flat)%>
+  </button>
+    <button type="button" class="btn btn-outline-primary">
+      <%= link_to "Delete",
+                  flat_path(@flat),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }%>
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <%= link_to "Go back to the lists",
+                  flats_path,
+                  data: { confirm: "Are you sure you want to go back?" }%>
+    </button>
+  </div>
+  <div class="card-footer text-muted">
+    <h4><%= @flat.created_at %></h4>
+  </div>
+</div>
